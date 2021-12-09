@@ -2,7 +2,7 @@ package data_structure;
 
 public class Main {
     public static void main(String[] args){
-        QueueUsingArray queue = new QueueUsingArray(5);
+        QueueUsingStack queue = new QueueUsingStack();
 
 //        queue.enqueue(0);
         queue.enqueue(1);
@@ -10,7 +10,7 @@ public class Main {
         queue.enqueue(3);
         queue.enqueue(4);
         queue.dequeue();
-        queue.dequeue();
+//        queue.dequeue();
         queue.enqueue(5);
         queue.enqueue(6);
         System.out.println(queue.isEmpty());
