@@ -6,6 +6,7 @@ public class QueueUsingArray {
     private int[] items;
     private int front;
     private int rear;
+    private int count = 0;
 
     QueueUsingArray(int size){
         items = new int[size];
@@ -14,23 +15,18 @@ public class QueueUsingArray {
 
     public void enqueue(int item){
         if (isFull()) throw new IllegalStateException();
-        if (rear == items.length) {
-            int[] temp_arr = new int[items.length];
-            int j = 0;
-            for (int i = front; i < rear; i++)
-                temp_arr[j++] = items[i];
-
-            items = temp_arr;
-            front = 0;
-            rear = j;
-        }
-
-        items[rear++] = item;
+        items[rear] = item;
+        rear = (rear + 1) % items.length;
+        count++;
     }
 
     public int dequeue(){
         if (isEmpty()) throw new IllegalStateException();
-        return front++;
+        int temp = items[front];
+        items[front] = 0;
+        front = (front + 1) % items.length;
+        count--;
+        return temp;
     }
 
     public int peek(){
@@ -39,19 +35,18 @@ public class QueueUsingArray {
     }
 
     public boolean isEmpty(){
-        return front == rear;
+        return count == 0;
     }
-
-    public boolean isFull(){
-        return (front == 0) && (rear == items.length);
-    }
+    public boolean isFull() { return count == items.length; }
 
     @Override
     public String toString(){
-        int[] temp_arr = new int[rear - front];
+        int[] temp_arr = new int[count];
         int j = front;
-        for (int i = 0; i < temp_arr.length; i++)
-            temp_arr[i] = items[j++];
+        for (int i = 0; i < count; i++){
+            temp_arr[i] = items[j];
+            j = (j + 1) % items.length;
+        }
         return Arrays.toString(temp_arr);
     }
 }
