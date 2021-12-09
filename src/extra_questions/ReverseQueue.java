@@ -22,7 +22,7 @@ class ReverseQueue {
         queue.add(3);
 
         reverseQueue(queue);
-        
+
         System.out.println(queue);
     }
 }
