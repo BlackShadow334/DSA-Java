@@ -12,6 +12,7 @@ public class Main {
         queue.dequeue();
         queue.dequeue();
         queue.enqueue(5);
+        queue.enqueue(6);
         System.out.println(queue.isEmpty());
         System.out.println(queue);
     }
