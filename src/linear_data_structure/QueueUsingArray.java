@@ -1,4 +1,4 @@
-package data_structure;
+package linear_data_structure;
 
 import java.util.Arrays;
 
