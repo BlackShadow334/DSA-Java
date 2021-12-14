@@ -2,19 +2,25 @@ package data_structure;
 
 public class Main {
     public static void main(String[] args){
-        UserPriorityQueue queue = new UserPriorityQueue(5);
+        UserHashTable hash_table = new UserHashTable();
 
-        queue.enqueue(5);
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(10);
-        queue.enqueue(4);
-        queue.dequeue();
-        queue.dequeue();
-        queue.enqueue(5);
-//        queue.enqueue(6);
-        System.out.println(queue.isEmpty());
-        System.out.println(queue);
+        hash_table.put(0, "Zero");
+        hash_table.put(1, "One");
+        hash_table.put(2, "Two");
+        hash_table.put(9, "Nine");
+        hash_table.put(10, "Ten");
+        hash_table.put(11, "Eleven");
+
+        hash_table.remove(9);
+        hash_table.remove(8);
+        hash_table.put(1, "one-one");
+
+        System.out.println(hash_table.get(0));
+        System.out.println(hash_table.get(1));
+        System.out.println(hash_table.get(9));
+        System.out.println(hash_table.get(10));
+        System.out.println(hash_table.get(11));
+        System.out.println(hash_table.get(6));
 
     }
 }
