@@ -2,27 +2,30 @@ package non_linear_data_structure;
 
 public class Main {
     public static void main(String[] args){
-        Tree tree0 = new Tree();
-        tree0.insert(5);
-        tree0.insert(2);
-        tree0.insert(3);
-        tree0.insert(8);
-        tree0.insert(7);
-        tree0.insert(6);
-//        System.out.println(tree.height());
-//        System.out.println(tree.minValue());
+        AVLTree avl_tree = new AVLTree();
 
-//        Tree tree1 = new Tree();
-//        tree1.insert(5);
-//        tree1.insert(2);
-//        tree1.insert(3);
-//        tree1.insert(8);
-//        tree1.insert(7);
-//        tree1.insert(4);
-//        System.out.println(tree0.equals(tree1));
+        // left heavy --> right rotation (50)
+//        avl_tree.insert(50);
+//        avl_tree.insert(30);
+//        avl_tree.insert(20);
 
-        tree0.traverseLevelOrder();
-//        System.out.println(tree0.height());
-        System.out.println(tree0.isBinarySearchTree());
+        // left heavy --> left rotation (30) + right rotation (50)
+//        avl_tree.insert(50);
+//        avl_tree.insert(30);
+//        avl_tree.insert(40);
+
+
+        // right heavy --> left rotation (10)
+//        avl_tree.insert(10);
+//        avl_tree.insert(20);
+//        avl_tree.insert(30);
+
+        // right heavy --> right rotation (30) + left rotation (10)
+        avl_tree.insert(10);
+        avl_tree.insert(30);
+        avl_tree.insert(20);
+
+
+        System.out.println();
     }
 }
