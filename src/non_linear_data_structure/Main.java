@@ -2,30 +2,24 @@ package non_linear_data_structure;
 
 public class Main {
     public static void main(String[] args){
-        AVLTree avl_tree = new AVLTree();
+        Heap heap = new Heap(10);
 
-        // left heavy --> right rotation (50)
-//        avl_tree.insert(50);
-//        avl_tree.insert(30);
-//        avl_tree.insert(20);
+        heap.insert(20);
+        heap.insert(15);
+        heap.insert(25);
+        heap.insert(10);
+        heap.insert(30);
+        heap.insert(5);
+        heap.insert(3);
+        heap.insert(35);
+        heap.insert(2);
+        heap.insert(1);
 
-        // left heavy --> left rotation (30) + right rotation (50)
-//        avl_tree.insert(50);
-//        avl_tree.insert(30);
-//        avl_tree.insert(40);
-
-
-        // right heavy --> left rotation (10)
-//        avl_tree.insert(10);
-//        avl_tree.insert(20);
-//        avl_tree.insert(30);
-
-        // right heavy --> right rotation (30) + left rotation (10)
-        avl_tree.insert(10);
-        avl_tree.insert(30);
-        avl_tree.insert(20);
-
-
-        System.out.println();
+        int a = heap.remove();
+        heap.remove();
+        heap.remove();
+        heap.remove();
+        System.out.println(a);
+        System.out.println(heap);
     }
 }
