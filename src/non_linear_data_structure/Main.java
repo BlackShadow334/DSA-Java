@@ -1,21 +1,22 @@
 package non_linear_data_structure;
 
-
 public class Main {
     public static void main(String[] args){
-        Trie trie = new Trie();
-        trie.insert("car");
-        trie.insert("care");
-        trie.insert("card");
-        trie.insert("careful");
-        trie.insert("apple");
-        trie.insert("egg");
+        Graph graph = new Graph();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
 
-//        trie.remove("care");
+        graph.addEdge("A", "B");
+        graph.addEdge("B", "C");
+        graph.addEdge("C", "A");
+        graph.addEdge("D", "A");
 
-        System.out.println(trie.contains("car"));
-        for (String word: trie.autoComplete("ca")){
-            System.out.println(word);
-        }
+//        graph.traverseDepthFirst("A");
+//        graph.traverseBreadthFirst("K");
+        System.out.println(graph.topologicalSort());
+        System.out.println(graph.hasCycle());
+//        graph.print();
     }
 }
