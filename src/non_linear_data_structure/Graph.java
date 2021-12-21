@@ -16,7 +16,7 @@ public class Graph {
     private final Map<String, Node> nodes = new HashMap<>();
     private final Map<Node, List<Node>> adjacency_list = new HashMap<>();
 
-    public void addVertex(String label) {
+    public void addNode(String label) {
         Node node = new Node(label);
         nodes.putIfAbsent(label, node);
         adjacency_list.putIfAbsent(node, new ArrayList<>());
@@ -32,7 +32,7 @@ public class Graph {
 
     }
 
-    public void removeVertex(String label) {
+    public void removeNode(String label) {
         Node node = nodes.get(label);
         if (node == null) return;
 
@@ -178,17 +178,3 @@ public class Graph {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
