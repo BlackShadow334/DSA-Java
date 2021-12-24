@@ -192,7 +192,7 @@ public class WeightedGraph {
     public boolean containsNode(String label){
         return nodes.containsKey(label);
     }
-    
+
     public void print(){
         for (Node node: nodes.values()){
             System.out.println(node + " has edges " + node.getEdges());
