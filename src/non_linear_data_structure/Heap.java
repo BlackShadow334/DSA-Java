@@ -3,7 +3,7 @@ package non_linear_data_structure;
 import java.util.Arrays;
 
 // Applications:
-//      Sorting elements in array in ascending or descending order.
+//      sorting elements in array in ascending or descending order.
 //      Using as Priority Queue.
 
 public class Heap {

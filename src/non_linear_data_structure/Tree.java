@@ -141,7 +141,7 @@ public class Tree {
 
     // Checking if it is a Binary Search Tree.
     public boolean isBinarySearchTree(){
-        // Searching according to range.
+        // searching according to range.
         return isBinarySearchTree(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
